@@ -1,4 +1,6 @@
 import argparse
+import random
+import torch
 
 parser = argparse.ArgumentParser()
 
@@ -23,6 +25,9 @@ def main(args):
     pass
 
 if __name__ == '__main__':
+
+    random.seed(1)
+    torch.manual_seed(1)
 
     args = parser.parse_args()
     main(args)
